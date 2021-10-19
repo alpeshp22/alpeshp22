@@ -1,0 +1,551 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+body{
+    margin: 0;
+    padding: 0;
+    font-family: 'Montserrat', sans-serif;
+}
+
+
+/*============================
+         COMMON STYLES
+============================*/
+:root{
+    --themeBlue: #3a4ba5;
+    --black: #000000;
+    --white: #FFFFFF;
+    --headerLik: #5a5555;
+    --inputBorder: #acacac;
+    --inputBG: #fbfbfb;
+    --footerTitleBorder: #6b7ddd;
+    --C1C1C1: #1C1C1C;
+    --T222: #222222;
+    --T333: #333333;
+    --T555: #555555;
+}
+a{
+    text-decoration: none;
+    color: var(--black);
+}
+a:hover, a:focus{
+    color: inherit;
+    text-decoration: none;
+    box-shadow: none;
+    outline: none;
+}
+a:hover, a:focus, button:hover, button:focus, .btn:hover, .btn:focus{
+    color: inherit;
+    text-decoration: none;
+    box-shadow: none;
+    outline: none;
+}
+.form-control:hover, .form-control:focus, .form-check-input:hover, .form-check-input:focus{
+    border-color: inherit;
+    box-shadow: none;
+    outline: none;
+}
+
+
+.section-title{
+    position: relative;
+    font-size: 30px;
+    font-weight: 600;
+    color: var(--themeBlue);
+    text-align: center;
+    margin-bottom: 50px;
+}
+.section-title::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    width: 70px;
+    height: 3px;
+    border-radius: 5px;
+    background-color: var(--themeBlue);
+    left: 50%;
+    transform: translateX(-50%);
+}
+/*============================
+        CUSTOM CLASSES
+============================*/
+.text-blue{
+    color: var(--themeBlue) !important;
+}
+.bg-blue{
+    background-color: var(--themeBlue) !important;
+}
+.btn-blue {
+    background-color: var(--themeBlue);
+    border-color: var(--themeBlue);
+    color: var(--white);
+    font-weight: 600;
+}
+.btn-blue:hover {
+    background-color: var(--C1C1C1);
+    border-color: var(--C1C1C1);
+    color: var(--white);
+}
+
+
+
+/*============================
+        START HEADER
+============================*/
+header {
+    position: relative;
+    padding: 10px 40px;
+    background-color: var(--white);
+    box-shadow: 3px 0 10px rgb(0,0,0,0.3);
+}
+
+header .site-logo {
+    max-width: 200px;
+}
+.header-contact-row {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+.header-contact {
+    display: flex;
+    align-items: center;
+    color: var(--black);
+    text-align: left;
+    margin-left: 20px;
+}
+.header-contact img{
+    width: 35px;
+    height: 35px;
+}
+.header-contact-col{
+    padding-left: 10px;
+}
+.header-contact-col span{
+    display: block;
+    font-size: 16px;
+    line-height: 20px;
+    color: var(--black);
+    font-weight: 500;
+}
+.main-navigation .navbar{
+    padding-bottom: 0;
+}
+.main-navigation .navbar-nav .nav-item {
+    margin-left: 25px;
+}
+.main-navigation .navbar-nav .nav-item:first-child {
+    margin-left: 0;
+}
+.main-navigation .navbar-nav .nav-link {
+    font-size: 16px;
+    color: var(--headerLik);
+    font-weight: 500;
+    border-bottom: 3px solid transparent;
+    padding-left: 0;
+    padding-right: 0;
+    padding-bottom: 3px;
+}
+.main-navigation .navbar-nav .nav-link.active{
+    border-bottom-color: var(--themeBlue);
+}
+.show.dropdown-toggle::after {
+    border-top: 0;
+    border-bottom: .3em solid;
+}
+.main-navigation .navbar-nav .dropdown-item {
+    font-size: 16px;
+    color: var(--headerLik);
+    font-weight: 500;
+}
+.main-navigation .navbar-nav .dropdown-item:focus,
+.main-navigation .navbar-nav .dropdown-item:active{
+    background-color: var(--white);
+}
+.main-navigation .navbar-nav .dropdown-menu {
+    border-color: #3a4ba5;
+    border-width: 2px;
+    box-shadow: 3px 3px 5px rgb(0 0 0 / 10%);
+    border-radius: 20px;
+    border-top-left-radius: 0;
+}
+
+/*============================
+        START BANNER
+============================*/
+.hero-banner {
+    position: relative;
+    height: calc(100vh - 106px);
+    background-image: url(../images/banner-img.png);
+    background-size: 100% 110%;
+    background-position: bottom right;
+}
+.hero-banner .container,
+.hero-banner .container-lg,
+.hero-banner .container-xl{
+    max-width: 86%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+.hero-banner-content h2{
+    font-size: 5vw;
+    color: var(--themeBlue);
+    font-weight: 700;
+    text-transform: uppercase;
+    margin-bottom: 0;
+}
+.hero-banner-content h4{
+    font-size: 2.2vw;
+    color: var(--1C1C1C);
+    font-weight: 600;
+    margin-bottom: 0.3vw;
+}
+.hero-banner-content h5{
+    font-size: 1.7vw;
+    color: var(--1C1C1C);
+    font-weight: 700;
+}
+.hero-banner-content .btn {
+    margin-top: 2vw;
+    font-size: 1.1vw;
+    text-transform: uppercase;
+    padding: 5px 20px;
+    border-radius: 2px;
+}
+
+/*=================================
+        START ESTATE PLANING
+=================================*/
+.estate-planning-sec{
+    position: relative;
+    padding: 100px 0;
+    background-color: var(--white);
+
+}
+.estate-planning-content{
+    padding-left: 30px;
+}
+.estate-planning-content h4{
+    font-size: 30px;
+    color: var(--T333);
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+.estate-planning-content p{
+    font-size: 16px;
+    color: var(--T222);
+    line-height: 26px;
+    font-weight: 500;
+    margin-bottom: 30px;
+}
+.estate-planning-content .btn{
+    color: var(--themeBlue);
+    font-weight: 600;
+    border-bottom: 2px solid var(--themeBlue);
+    border-radius: 0;
+    text-transform: uppercase;
+}
+
+/*=================================
+        START DIVORCE SEC
+=================================*/
+.divorce-sec{
+    position: relative;
+    padding: 100px 0;
+    background-image: url(../images/blue-bg.png);
+    background-size: cover;
+    background-position: top left;
+    color: var(--white);
+    text-align: center;
+}
+.divorce-sec h3{
+    font-size: 25px;
+    font-weight: 500;
+    /* margin-bottom: 10px; */
+}
+.divorce-sec p{
+    font-size: 16px;
+    line-height: 26px;
+    font-weight: 400;
+    margin: 50px 0;
+}
+.divorce-sec p.sub-para{
+    font-weight: 500;
+    margin-bottom: 0;
+    margin-top: 0;
+}
+.divorce-sec .fancy-devider{
+    display: block;
+    width: 150px;
+    height: 3px;
+    background-color: var(--white);
+    margin: 0 auto;
+    margin-top: 10px;
+    border-radius: 3px;
+}
+/*=================================
+        START TESTIMONIAL SEC
+=================================*/
+.testimonial-sec{
+    position: relative;
+    padding: 80px 0;
+    background-color: var(--white);
+}
+.client-row {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+.client-row .client-img{
+    width: 150px;
+    height: 150px;
+    border-radius: 75%;
+    border: 3px solid var(--themeBlue);
+    overflow: hidden;
+    display: block;
+}
+.client-row .client-img img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: top;
+}
+.client-row figure {
+    flex: 1;
+    padding-left: 30px;
+    margin-bottom: 0;
+}
+.client-row p{
+    font-size: 16px;
+    line-height: 26px;
+    font-weight: 500;
+    color: var(--T222);
+    margin-bottom: 20px;
+}
+.blockquote-footer{
+    font-size: 16px;
+    font-weight: 600;
+    color: var(--themeBlue);
+    margin-bottom: 0;
+    margin-top: 20px;
+}
+.testimonial-slider .owl-nav {
+    position: absolute;
+    right: 0;
+    bottom: 20px;
+}
+.testimonial-slider .owl-dots,
+.testimonial-slider .owl-nav button span{
+    display: none;
+}
+.testimonial-slider .owl-nav button{
+    position: relative;
+    width: 45px;
+    height: 25px;
+    padding: 0;
+    border: 2px solid var(--themeBlue) !important;
+    color: var(--themeBlue) !important;
+    border-radius: 30px;
+    margin-left: 5px;
+}
+.testimonial-slider .owl-nav button:hover{
+    background-color: var(--themeBlue) !important;
+    color: var(--white) !important;
+}
+.testimonial-slider .owl-nav button.owl-prev:after,
+.testimonial-slider .owl-nav button.owl-next:after{
+    content: '\f060';
+    font-family: "Font Awesome 6 Free";
+    font-weight: bold;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.testimonial-slider .owl-nav button.owl-next:after{
+    content: '\f061';
+}
+.testimonial-slider .owl-nav button.disabled {
+    pointer-events: none;
+    opacity: 0.5;
+}
+/*=================================
+        START OFFFER SEC
+=================================*/
+.offer-sec{
+    position: relative;
+    padding: 80px 0;
+    background-color: var(--themeBlue);
+}
+.offer-sec .section-title{
+    color: var(--white);
+    margin-bottom: 80px;
+}
+.offer-sec .section-title:after{
+    background-color: var(--white);
+}
+.offer-content {
+    position: relative;
+    text-align: center;
+}
+.offer-content .img-wrap {
+    width: 100px;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    margin-bottom: 20px;
+}
+.offer-content h5 {
+    font-size: 17px;
+    letter-spacing: 0px;
+    line-height: 23px;
+    color: #ffffff;
+    font-weight: 500;
+}
+/*=================================
+        START CONTACT SEC
+=================================*/
+.contact-sec{
+    position: relative;
+    padding: 80px 0;
+    background-image: url(../images/map-bg.png);
+    background-size: cover;
+    background-position: center center;
+}
+.contact-form .form-control{
+    height: 48px;
+    background-color: var(--inputBG);
+    border: 2px solid var(--inputBorder);
+    border-radius: 4px;
+    color: var(--black);
+    font-weight: 500;
+}
+.contact-form textarea.form-control{
+    height: auto;
+}
+.contact-form .form-control::placeholder{
+    color: var(--T555);
+    font-weight: 500;
+}
+.contact-form .input-label{
+    font-size: 18px;
+    color: var(--themeBlue);
+    font-weight: 500;
+}
+.contact-form .form-check-input{
+    width: 20px;
+    height: 20px;
+    border-radius: 2px;
+    /* background-color: var(--inputBG); */
+    border: 2px solid var(--inputBorder);
+}
+.contact-form .form-check-input:checked {
+    background-color: var(--themeBlue);
+    border-color: var(--themeBlue);
+}
+.contact-form .form-check-label{
+    font-size: 16px;
+    line-height: 24px;
+    color: var(--T333);
+    font-weight: 400;
+    margin-top: 2px;
+    margin-left: 5px;
+}
+.contact-form .form-check-label a{
+    text-decoration: underline !important;
+}
+.contact-form .btn-blue {
+    font-size: 18px;
+    text-transform: uppercase;
+    padding: 8px 25px;
+}
+/*=================================
+        START CONTACT SEC
+=================================*/
+.footer-sec{
+    position: relative;
+    padding: 80px 0;
+    background-color: var(--themeBlue);
+    color: var(--white);
+}
+.footer-title {
+    font-size: 22px;
+    font-weight: 500;
+    border-bottom: 2px solid var(--footerTitleBorder);
+    padding-bottom: 5px;
+    margin-bottom: 30px;
+}
+ul.footer-links {
+    margin: 0;
+    padding: 0;
+    column-count: 2;
+}
+ul.footer-links li{
+    list-style: none;
+    margin-bottom: 10px;
+}
+ul.footer-links li a{
+    position: relative;
+    font-size: 15px;
+    color: var(--white);
+    font-weight: 500;
+    padding-left: 20px;
+}
+ul.footer-links li a:before{
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 5px;
+    width: 8px;
+    height: 8px;
+    background-color: var(--footerTitleBorder);
+    border-radius: 75%;
+}
+.footer-add-row {
+    display: flex;
+    margin-bottom: 15px;
+    position: relative;
+    font-size: 15px;
+    color: var(--white);
+    font-weight: 500;
+}
+.footer-add-row img{
+    display: block;
+    width: 20px;
+    height: 20px;
+    object-fit: contain;
+}
+.footer-add-row div {
+    flex: 1;
+    padding-left: 15px;
+}
+.footer-sec .review-btn{
+    font-size: 16px;
+    color: var(--white);
+    font-weight: 600;
+    text-transform: uppercase;
+    border: 2px solid var(--white);
+    padding: 6px 25px;
+    margin-left: 37px;
+}
+.footer-sec .review-btn:hover{
+    color: var(--white);
+    background-color: var(--black);
+    border-color: var(--black);
+
+}
+.footer-bar{
+    position: relative;
+    padding: 30px 0;
+    background-color: var(--C1C1C1);
+    border-top: 3px solid var(--white);
+}
+.footer-bar p{
+    font-size: 14px;
+    font-weight: 400;
+    color: var(--T555);
+    margin-bottom: 0;
+    text-align: center;
+}
